@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOSEPH | Web Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar similar to Netflix */
+        .side-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 60px;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .side-nav button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .side-nav button:hover {
+            color: #e50914;
+        }
+
+        /* Large header with background image */
+        header {
+            position: relative;
+            height: 80vh;
+            background-image: url('images/BlackAndWhite.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 120px; /* Adjust for the side-nav width */
+            color: white;
+        }
+
+        header .content {
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.6);  /* Semi-transparent black background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for better contrast */
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            font-weight: 600; /* Makes the description bold */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for better contrast */
+        }
+
+        header .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        header .buttons button {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        header .buttons button:hover {
+            background-color: #f40612;
+        }
+
+        /* Carousel section */
+        .thumbnails {
+            margin-top: -100px;
+            padding: 0 50px;
+        }
+
+        .thumbnails h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease; /* Smooth movement for one item at a time */
+        }
+
+        .carousel img {
+            width: 300px;  /* Increased size for placeholders */
+            height: 180px; /* Adjusted height for better proportion */
+            border-radius: 5px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Scroll Buttons */
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 100;
+        }
+
+        .scroll-left {
+            left: 0;
+        }
+
+        .scroll-right {
+            right: 0;
+        }
+
+        /* About Me Section */
+        .about-me {
+            margin-top: 40px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .about-me h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .about-me .subscribe-btn {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .about-me .subscribe-btn:hover {
+            background-color: #f40612;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Side navigation buttons (Netflix-style) -->
+    <div class="side-nav">
+        <button>&#127919;</button> <!-- Home -->
+        <button>&#128269;</button> <!-- Search -->
+        <button>&#9733;</button> <!-- My List -->
+        <button>&#9881;</button> <!-- Settings -->
+    </div>
+
+    <!-- Large header with background image -->
+    <header>
+        <div class="content">
+            <h1>Project Showcase</h1>
+            <p>When a new project starts, a journey into development begins. Explore my latest creations, built with cutting-edge technologies and passion for coding.</p>
+            <div class="buttons">
+                <button>Play</button>
+                <button>More Info</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Thumbnails Section -->
+    <div class="thumbnails">
+        <h2>Trending Projects</h2>
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <img src="images/Train.jpg" alt="Project 1">
+                <img src="images/couple.jpg" alt="Project 2">
+                <img src="images/car.jpg" alt="Project 3">
+                <img src="images/happy.jpg" alt="Project 4">
+                <img src="images/newspaper.jpg" alt="Project 5">
+                <img src="images/fields.jpg" alt="Project 6">
+                <img src="images/hands.jpg" alt="Project 7">
+                <img src="images/crowd.jpg" alt="Project 8">
+                <img src="images/gable.jpg" alt="Project 9">
+            </div>
+            <button class="scroll-btn scroll-left">&#60;</button>
+            <button class="scroll-btn scroll-right">&#62;</button>
+        </div>
+    </div>
+
+   <!-- About Me Section -->
+<div class="about-me">
+    <h2>About Me</h2>
+    <p>
+        Hello! I'm <strong>Joseph Derick B. Simbulan</strong>, a passionate web developer and digital marketer from <strong>BSIT 4-B</strong>. This is my personal website where I showcase my journey in both technology and creativity. As a student of Information Technology, I have developed a keen interest in Digital Marketing and its intersection with technology. One of my key activities is using <strong>Google Analytics</strong> to measure and optimize marketing performance. Through this website, I demonstrate how data-driven decisions can enhance user experience and drive more engagement. Apart from my work in digital marketing, I also have a deep love for <strong>cinematic photography</strong>, capturing breathtaking moments with a focus on composition, lighting, and storytelling—bringing life to the frame. My passion for photography has influenced the design and aesthetics of this website, aiming for a visually engaging experience that reflects my artistic side. I’m constantly learning and evolving in the tech world, and I invite you to explore my projects and activities showcased here. I hope you enjoy the creative fusion of web development, digital marketing, and visual storytelling! To know more about me, please click the subscribe button.
+    </p>
+    <button class="subscribe-btn" onclick="window.location.href='thank-you.html'">Subscribe</button>
+</div>
+
+
+
+    <script>
+        const scrollLeft = document.querySelector('.scroll-left');
+        const scrollRight = document.querySelector('.scroll-right');
+        const carousel = document.querySelector('.carousel');
+        let scrollPosition = 0;
+        const imageWidth = 300;  // Increased size for carousel images
+        const imagesPerSlide = 5;  // Number of images visible per slide
+        const totalImages = document.querySelectorAll('.carousel img').length;
+
+        // Function to move the carousel to the right (1 image at a time)
+        const moveCarouselRight = () => {
+            scrollPosition += imageWidth;  // Move by 1 image width
+            carousel.style.transition = 'transform 0.5s ease';  // Smooth transition
+            carousel.style.transform = `translateX(-${scrollPosition}px)`;
+
+            if (scrollPosition >= imageWidth * (totalImages - imagesPerSlide)) {
+                // Once we've scrolled to the last image, reset position after a small delay
+                setTimeout(() => {
+                    scrollPosition = 0;
+                    carousel.style.transition = 'none';  // Disable transition for the reset
+                    carousel.style.transform = `translateX(0px)`;
+                    setTimeout(() => {
+                        carousel.style.transition = 'transform 0.5s ease';  // Re-enable transition
+                    }, 50);
+                }, 500);
+            }
+        };
+
+        // Function to move the carousel to the left (1 image at a time)
+        const moveCarouselLeft = () => {
+            if (scrollPosition > 0) {
+                scrollPosition -= imageWidth;  // Move by 1 image width
+                carousel.style.transition = 'transform 0.5s ease';  // Smooth transition
+                carousel.style.transform = `translateX(-${scrollPosition}px)`;
+            }
+        };
+
+        scrollRight.addEventListener('click', moveCarouselRight);
+        scrollLeft.addEventListener('click', moveCarouselLeft);
+
+        // Auto-scroll every 5 seconds (slower than before)
+        setInterval(moveCarouselRight, 5000);  // Auto-scroll every 5 seconds
+    </script>
+
+</body>
+</html>
